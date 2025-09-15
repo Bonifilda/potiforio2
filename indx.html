@@ -1,62 +1,84 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boni Portofolio</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Boni Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header class="bg-black flex  text-white justify-between p-15">
-        <h1>BONI</h1>
-        <ul class="flex gap-35 pr-30">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Aboutme">About me</a></li>
-            <li><a href="#project">project</a></li>
-            <li><a href="contact">contact</a></li>
-         
-        </ul> 
-    </header> 
-    <section class="bg-black text-white   p-50" id="Home">
-        <div class="flex item-center justify-between " >
-        <p1 class="text-4xl">HELLO I'M Bonifilda </p1>
-        <h2 class="font-bold text-4xl"> frontend developer</h2>
-        <p2> I am strive to become profection developer</p2></div>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-orange-900 text-white flex justify-between items-center p-5">
+        <h1 class="text-2xl font-bold">BONI</h1>
+        <ul class="flex gap-35">
+            <li><a href="#Home" class="hover:underline">Home</a></li>
+            <li><a href="#Aboutme" class="hover:underline">About me</a></li>
+            <li><a href="#project" class="hover:underline">Projects</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Home Section -->
+    <section class="bg-green-600 text-white p-20 text-center" id="Home">
+        <h1 class="text-5xl font-bold mb-4">HELLO, I'M Bonifilda</h1>
+        <h2 class="text-3xl font-semibold mb-2">Frontend Developer</h2>
+        <p class="text-lg">I strive to become a professional frontend developer.</p>
     </section>
-         <section class="  bg-black text-white  p-15  text-left "id="Aboutme">
-            <div class="item-center justify-center">
-         <h3 class="  font-bold text-5xl">About me</h3>
-         <p>I am MANIRADUKUNDA Bonifilda,I have bachelor degree in biology and chemistry with education.</p>
-         <p> Now ,I want tobe fucture frontend  developer </p>
-         </div>
-          <div class="flex justify-center">
-          <img src="boni image in lab.jpg" alt="picture show lab activity" class="w-1/4">
-          </div>
-          </section>  
-          <h4 class="bg-black text-white flex justify-center font-bold text-5xl" >My projects</h4>
-          <section class=" bg-black  flex text-white  justify-between  p-15" id="project">
-            <ul class=" flex gap-35 ">
-                <ul>
-            <li>ATM simulator</li>
-            <p>A simple javascript project that simulates an ATM system.</p>
-            <img src="ATM image.PNG" alt="image ATM simulator">
-            </ul>
-            <ul>
-            <li> EVITATION</li>
-            <p> This Evitation show  gradution day </p>
-            <img src="inivitation.image.PNG" alt=" show groduation Evitation">
-            </ul>
-            <ul>
-                 <li>CALCULATOR</li>
-                <P>this is simple calculator</P>
-                <img src="calculator.image.PNG" alt="image show calculator">
-            </ul>
+
+    <!-- About Me Section -->
+    <section class="bg-red-900 text-white p-20" id="Aboutme">
+        <div class="flex flex-col md:flex-row items-center md:justify-between">
+            <div class="md:w-2/3">
+                <h3 class="text-5xl font-bold mb-4">About Me</h3>
+                <p class="mb-2">I am MANIRADUKUNDA Bonifilda. I have a bachelor’s degree in Biology and Chemistry with Education.</p>
+                <p>Now, I want to become a future frontend developer.</p>
+            </div>
+            <div class="md:w-1/3 mt-6 md:mt-0">
+                <img src="boni image in lab.jpg" alt="Lab activity" class="rounded-full w-full shadow-lg">
+            </div>
+        </div>
     </section>
-    <footer class="bg-black text-white p-50" id="contact">
-        <h5 class="font-bold text-4xl ">contact </h5>
-         <p> 2025 Bonifilda.All rights reserved.</p>
-        <p>Email:bonimani2020@gmail.com</p>
-    </footer> 
+
+    <!-- Projects Section -->
+    <section class="p-20" id="project">
+        <h4 class="text-5xl font-bold text-center mb-10">My Projects</h4>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-black text-white p-5 rounded-lg shadow-lg">
+                <h5 class="text-2xl font-bold mb-2">ATM Simulator</h5>
+                <p class="mb-2">A simple JavaScript project that simulates an ATM system.</p>
+                <img src="ATM image.PNG" alt="ATM simulator" class="rounded-lg">
+            </div>
+            <div class="bg-black text-white p-5 rounded-lg shadow-lg">
+                <h5 class="text-2xl font-bold mb-2">EVITATION</h5>
+                <p class="mb-2">This Evitation shows graduation day.</p>
+                <img src="inivitation.image.PNG" alt="Graduation invitation" class="rounded-lg">
+            </div>
+            <div class="bg-black text-white p-5 rounded-lg shadow-lg">
+                <h5 class="text-2xl font-bold mb-2">Calculator</h5>
+                <p class="mb-2">This is a simple calculator.</p>
+                <img src="calculator.image.PNG" alt="Calculator" class="rounded-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-gray-200 p-20" id="contact">
+        <h5 class="text-4xl font-bold mb-6 text-center">Contact Me</h5>
+        <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg flex flex-col gap-4">
+            <label for="name" class="font-semibold">Name</label>
+            <input type="text" id="name" class="border border-gray-300 p-2 rounded" placeholder="Your Name" required>
+
+            <label for="email" class="font-semibold">Email</label>
+            <input type="email" id="email" class="border border-gray-300 p-2 rounded" placeholder="Your Email" required>
+
+            <label for="message" class="font-semibold">Message</label>
+            <textarea id="message" rows="5" class="border border-gray-300 p-2 rounded" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="bg-orange-900 text-white py-2 rounded font-bold hover:bg-orange-700 transition">Send Message</button>
+        </form>
+        <p class="text-center mt-6 text-gray-600">2025 Bonifilda. All rights reserved. Email: bonimani2020@gmail.com</p>
+    </section>
+
 </body>
-</html> 
-         
+</html>
